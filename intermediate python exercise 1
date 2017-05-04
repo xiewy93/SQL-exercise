@@ -1,4 +1,26 @@
-https://github.com/Yixiaohan/show-me-the-code
+题目来源：https://github.com/Yixiaohan/show-me-the-code
+要详细了解PIL的强大功能，请请参考PIL官方文档：
+http://effbot.org/imagingbook/
 
 **第 0001 题：**将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。
 
+from PIL import Image,ImageDraw,ImageFont
+import random
+
+msgNum = str(random.randint(1,99)) #random.randint(a, b)，用于生成一个指定范围内的整数。其中参数a是下限，参数b是上限，生成的随机数n: a <= n <= b
+
+# Read image
+im = Image.open('C:/Users/lenovo/Documents/Python Scripts/kxrr.png')
+w,h = im.size
+wDraw = 0.8 * w
+hDraw = 0.08 * w
+
+# Draw image
+# know more about ImageFont.truetype --> http://www.2cto.com/kf/201603/491448.html
+
+font = ImageFont.truetype("C:/Windows/Fonts/Arial.TTF", 20) # use absolute font path to fix 'IOError: cannot open resource'
+draw = ImageDraw.Draw(im)
+draw.text((wDraw,hDraw), msgNum, font=font, fill=(255,33,33))
+
+# Save image
+im.save('kxrr_msg.png', 'png')
