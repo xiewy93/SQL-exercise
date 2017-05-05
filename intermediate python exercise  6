@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # **第 0004 题：**任一个英文的纯文本文件，统计其中的单词出现的个数。
 # know more about re module --> https://docs.python.org/2/library/re.html
+# http://www.cnblogs.com/b13272012771/p/3963945.html
+
 import re
 
 fin = open('C:/Users/lenovo/Documents/Python Scripts/0004-text.txt', 'r')
