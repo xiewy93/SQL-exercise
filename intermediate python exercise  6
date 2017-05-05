@@ -3,7 +3,7 @@
 # know more about re module --> https://docs.python.org/2/library/re.html
 import re
 
-fin = open('source/0004-text.txt', 'r')
+fin = open('C:/Users/lenovo/Documents/Python Scripts/0004-text.txt', 'r')
 str = fin.read()
 
 reObj = re.compile('\b?(\w+)\b?')
