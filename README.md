@@ -1,2 +1,3 @@
-# python-exercise
-Show Me the Code Python version. https://github.com/Show-Me-the-Code/python
+# SQL-exercise
+some sql exercise use the web:http://sqlfiddle.com/
+the other relation web write in the exercise files
